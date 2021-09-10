@@ -31,6 +31,7 @@ docker swarm leave
 ## Dependencies
 - go: 1.17
 - redis: 6.2
+- docker / docker swarm / docker compose version 3.8
 
 ## Packages
 ### [Testify](github.com/stretchr/testify)
