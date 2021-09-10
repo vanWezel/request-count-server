@@ -20,11 +20,13 @@ type Handler struct {
 }
 
 func New() *Handler {
+	host := helper.Getenv("REDIS_HOST", "redis:6379")
+	db := helper.GetenvToi("REDIS_DB", "0")
 	instance := helper.Getenv("HOSTNAME", "localhost")
 	port := helper.GetenvToi("PORT", "80")
 
 	return &Handler{
-		repository: repository.NewMock(),
+		repository: repository.NewRedis(host, db, instance),
 		instance:   instance,
 		Port:       port,
 	}
