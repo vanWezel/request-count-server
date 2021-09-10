@@ -8,6 +8,26 @@ This server will count the requests per instance and for the cluster in total. B
 - TEST_REDIS_HOST=127.0.0.1:6379 -> for testing, redis host connection
 - TEST_REDIS_DB=1 -> for testing, which redis database to use
 
+## How to run?
+### Build the container
+```
+docker build -t request-count:1.0.0 .
+```
+### Init docker swarm
+````
+docker swarm init
+````
+### Run
+````
+docker stack deploy --compose-file docker-compose.yml request-count
+````
+
+## How to stop?
+````
+docker stack rm request-count
+docker swarm leave
+````
+
 ## Dependencies
 - go: 1.17
 - redis: 6.2
