@@ -36,8 +36,8 @@ docker swarm leave
 ### [Testify](github.com/stretchr/testify)
 A good package for unit tests
 
-###[Echo](https://echo.labstack.com/guide/)
+### [Echo](https://echo.labstack.com/guide/)
 Well documented, lightweight, easy to use and unit test
 
-###[Redigo](https://github.com/gomodule/redigo)
+### [Redigo](https://github.com/gomodule/redigo)
 Well documented, lightweight
