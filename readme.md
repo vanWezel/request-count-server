@@ -28,6 +28,11 @@ docker stack rm request-count
 docker swarm leave
 ````
 
+## Endpoints
+- GET: / -> Increment the counters for the instance and the cluster
+- GET: /stats -> Show the current counter state
+- GET: /health -> Used in the health check, pings Redis
+
 ## Dependencies
 - go: 1.17
 - redis: 6.2
